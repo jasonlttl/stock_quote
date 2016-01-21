@@ -138,20 +138,20 @@ describe StockQuote::Stock do
 
         it "it should return json" do
           @stock = StockQuote::Stock.json_quote('aapl')
-          @stock.is_a?(Hash).should be_true
+          @stock.is_a?(Hash).should be_truthy
           @stock.should include('quote')
         end
 
         describe "should select specific fields" do
           it "as string" do
             @stock = StockQuote::Stock.json_quote('aapl', nil, nil, 'Symbol,Ask,Bid')
-            @stock.is_a?(Hash).should be_true
+            @stock.is_a?(Hash).should be_truthy
             @stock.should include('quote')
           end
 
           it "as array" do
             @stock = StockQuote::Stock.json_quote('aapl', nil, nil, ['Symbol','Ask','Bid'])
-            @stock.is_a?(Hash).should be_true
+            @stock.is_a?(Hash).should be_truthy
             @stock.should include('quote')
           end
         end
@@ -163,7 +163,7 @@ describe StockQuote::Stock do
 
         it 'should result in a successful query' do
           @stocks = StockQuote::Stock.json_quote('aapl,tsla')
-          @stocks.is_a?(Hash).should be_true
+          @stocks.is_a?(Hash).should be_truthy
           @stocks.should include('quote')
         end
       end
@@ -172,7 +172,7 @@ describe StockQuote::Stock do
 
         it 'should result in a successful query' do
           @stock = StockQuote::Stock.json_history('aapl', Date.today - 20)
-          @stock.is_a?(Hash).should be_true
+          @stock.is_a?(Hash).should be_truthy
           @stock.should include('quote')
         end
       end
