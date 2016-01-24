@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://query.yahooapis.com/v1/public/yql?callback=&diagnostics=true&env=store://datatables.org/alltableswithkeys&format=json&q=SELECT%20*%20FROM%20yahoo.finance.historicaldata%20WHERE%20symbol%20IN%20(%27AAPL%27)%20AND%20startDate%20=%20%272016-01-04%27%20AND%20endDate%20=%20%272016-01-24%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - main-5a0a2159-c16c-11e5-89b6-d89d676f9644
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sun, 24 Jan 2016 15:10:14 GMT
+      Age:
+      - '2'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":14,"created":"2016-01-24T15:10:14Z","lang":"en-US","diagnostics":{"url":[{"execution-start-time":"0","execution-stop-time":"2","execution-time":"2","content":"http://www.datatables.org/yahoo/finance/yahoo.finance.historicaldata.xml"},{"execution-start-time":"8","execution-stop-time":"25","execution-time":"17","content":"http://ichart.finance.yahoo.com/table.csv?a=0&b=4&e=24&g=d&c=2016&d=0&f=2016&s=AAPL"},{"execution-start-time":"28","execution-stop-time":"48","execution-time":"20","content":"http://ichart.finance.yahoo.com/table.csv?a=0&b=4&e=24&g=d&c=2016&d=0&f=2016&s=AAPL"}],"publiclyCallable":"true","cache":[{"execution-start-time":"5","execution-stop-time":"6","execution-time":"1","method":"GET","type":"MEMCACHED","content":"2758c733902b3212f9fdeecc8f0b7691"},{"execution-start-time":"27","execution-stop-time":"27","execution-time":"0","method":"GET","type":"MEMCACHED","content":"05363569fb5facd0029641b37c5185b1"}],"query":[{"execution-start-time":"6","execution-stop-time":"27","execution-time":"21","params":"{url=[http://ichart.finance.yahoo.com/table.csv?a=0&b=4&e=24&g=d&c=2016&d=0&f=2016&s=AAPL]}","content":"select
+        * from csv(0,1) where url=@url"},{"execution-start-time":"27","execution-stop-time":"48","execution-time":"21","params":"{columnsNames=[Date,Open,High,Low,Close,Volume,Adj_Close],
+        url=[http://ichart.finance.yahoo.com/table.csv?a=0&b=4&e=24&g=d&c=2016&d=0&f=2016&s=AAPL]}","content":"select
+        * from csv(2,0) where url=@url and columns=@columnsNames"}],"javascript":{"execution-start-time":"4","execution-stop-time":"56","execution-time":"52","instructions-used":"123225","table-name":"yahoo.finance.historicaldata"},"user-time":"57","service-time":"40","build-version":"0.2.386"},"results":{"quote":[{"Symbol":"AAPL","Date":"2016-01-22","Open":"98.629997","High":"101.459999","Low":"98.370003","Close":"101.419998","Volume":"65562800","Adj_Close":"101.419998"},{"Symbol":"AAPL","Date":"2016-01-21","Open":"97.059998","High":"97.879997","Low":"94.940002","Close":"96.300003","Volume":"52054500","Adj_Close":"96.300003"},{"Symbol":"AAPL","Date":"2016-01-20","Open":"95.099998","High":"98.190002","Low":"93.419998","Close":"96.790001","Volume":"72008300","Adj_Close":"96.790001"},{"Symbol":"AAPL","Date":"2016-01-19","Open":"98.410004","High":"98.650002","Low":"95.50","Close":"96.660004","Volume":"52841300","Adj_Close":"96.660004"},{"Symbol":"AAPL","Date":"2016-01-15","Open":"96.199997","High":"97.709999","Low":"95.360001","Close":"97.129997","Volume":"79010000","Adj_Close":"97.129997"},{"Symbol":"AAPL","Date":"2016-01-14","Open":"97.959999","High":"100.480003","Low":"95.739998","Close":"99.519997","Volume":"62424200","Adj_Close":"99.519997"},{"Symbol":"AAPL","Date":"2016-01-13","Open":"100.32","High":"101.190002","Low":"97.300003","Close":"97.389999","Volume":"61745000","Adj_Close":"97.389999"},{"Symbol":"AAPL","Date":"2016-01-12","Open":"100.550003","High":"100.690002","Low":"98.839996","Close":"99.959999","Volume":"48849400","Adj_Close":"99.959999"},{"Symbol":"AAPL","Date":"2016-01-11","Open":"98.970001","High":"99.059998","Low":"97.339996","Close":"98.529999","Volume":"49568300","Adj_Close":"98.529999"},{"Symbol":"AAPL","Date":"2016-01-08","Open":"98.550003","High":"99.110001","Low":"96.760002","Close":"96.959999","Volume":"70517700","Adj_Close":"96.959999"},{"Symbol":"AAPL","Date":"2016-01-07","Open":"98.68","High":"100.129997","Low":"96.43","Close":"96.449997","Volume":"80229800","Adj_Close":"96.449997"},{"Symbol":"AAPL","Date":"2016-01-06","Open":"100.559998","High":"102.370003","Low":"99.870003","Close":"100.699997","Volume":"68190100","Adj_Close":"100.699997"},{"Symbol":"AAPL","Date":"2016-01-05","Open":"105.75","High":"105.849998","Low":"102.410004","Close":"102.709999","Volume":"55252000","Adj_Close":"102.709999"},{"Symbol":"AAPL","Date":"2016-01-04","Open":"102.610001","High":"105.370003","Low":"102.00","Close":"105.349998","Volume":"67281200","Adj_Close":"105.349998"}]}}}'
+    http_version: 
+  recorded_at: Sun, 24 Jan 2016 15:10:14 GMT
+recorded_with: VCR 3.0.1

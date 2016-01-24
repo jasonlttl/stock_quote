@@ -1,8 +1,12 @@
 require 'stock_quote'
 require 'rubygems'
 require 'bundler/setup'
-require 'support/vcr'
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/vcr'
+  c.hook_into :webmock
+end
 
 RSpec.configure do |config|
-  config.extend VCR::RSpec::Macros
 end

@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://query.yahooapis.com/v1/public/yql?callback=&diagnostics=true&env=store://datatables.org/alltableswithkeys&format=json&q=SELECT%20*%20FROM%20yahoo.finance.quotes%20WHERE%20symbol%20IN%20(%27AAPL%27,%27TSLA%27)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - main-5a089aa3-c16c-11e5-89b6-d89d676f9644
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sun, 24 Jan 2016 15:10:27 GMT
+      Age:
+      - '0'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":2,"created":"2016-01-24T15:10:27Z","lang":"en-US","diagnostics":{"url":[{"execution-start-time":"1","execution-stop-time":"3","execution-time":"2","content":"http://www.datatables.org/yahoo/finance/yahoo.finance.quotes.xml"},{"execution-start-time":"9","execution-stop-time":"21","execution-time":"12","content":"http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=AAPL,TSLA"}],"publiclyCallable":"true","cache":{"execution-start-time":"7","execution-stop-time":"8","execution-time":"1","method":"GET","type":"MEMCACHED","content":"5d1e1de680846a307c9874dc3d6878dc"},"query":{"execution-start-time":"8","execution-stop-time":"22","execution-time":"14","params":"{url=[http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=AAPL,TSLA]}","content":"select
+        * from csv where url=@url and columns=''Ask,AverageDailyVolume,Bid,AskRealtime,BidRealtime,BookValue,Change&PercentChange,Change,Commission,Currency,ChangeRealtime,AfterHoursChangeRealtime,DividendShare,LastTradeDate,TradeDate,EarningsShare,ErrorIndicationreturnedforsymbolchangedinvalid,EPSEstimateCurrentYear,EPSEstimateNextYear,EPSEstimateNextQuarter,DaysLow,DaysHigh,YearLow,YearHigh,HoldingsGainPercent,AnnualizedGain,HoldingsGain,HoldingsGainPercentRealtime,HoldingsGainRealtime,MoreInfo,OrderBookRealtime,MarketCapitalization,MarketCapRealtime,EBITDA,ChangeFromYearLow,PercentChangeFromYearLow,LastTradeRealtimeWithTime,ChangePercentRealtime,ChangeFromYearHigh,PercebtChangeFromYearHigh,LastTradeWithTime,LastTradePriceOnly,HighLimit,LowLimit,DaysRange,DaysRangeRealtime,FiftydayMovingAverage,TwoHundreddayMovingAverage,ChangeFromTwoHundreddayMovingAverage,PercentChangeFromTwoHundreddayMovingAverage,ChangeFromFiftydayMovingAverage,PercentChangeFromFiftydayMovingAverage,Name,Notes,Open,PreviousClose,PricePaid,ChangeinPercent,PriceSales,PriceBook,ExDividendDate,PERatio,DividendPayDate,PERatioRealtime,PEGRatio,PriceEPSEstimateCurrentYear,PriceEPSEstimateNextYear,Symbol,SharesOwned,ShortRatio,LastTradeTime,TickerTrend,OneyrTargetPrice,Volume,HoldingsValue,HoldingsValueRealtime,YearRange,DaysValueChange,DaysValueChangeRealtime,StockExchange,DividendYield''"},"javascript":{"execution-start-time":"5","execution-stop-time":"41","execution-time":"35","instructions-used":"122722","table-name":"yahoo.finance.quotes"},"user-time":"43","service-time":"15","build-version":"0.2.386"},"results":{"quote":[{"symbol":"AAPL","Ask":"101.99","AverageDailyVolume":"47503900","Bid":"101.93","AskRealtime":null,"BidRealtime":null,"BookValue":"21.40","Change_PercentChange":"+5.12
+        - +5.32%","Change":"+5.12","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":"2.08","LastTradeDate":"1/22/2016","TradeDate":null,"EarningsShare":"9.22","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"9.49","EPSEstimateNextYear":"10.42","EPSEstimateNextQuarter":"2.23","DaysLow":"98.37","DaysHigh":"101.46","YearLow":"92.00","YearHigh":"134.54","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"565.45B","MarketCapRealtime":null,"EBITDA":"82.49B","ChangeFromYearLow":"9.42","PercentChangeFromYearLow":"+10.24%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-33.12","PercebtChangeFromYearHigh":"-24.62%","LastTradeWithTime":"4:00pm
+        - <b>101.42</b>","LastTradePriceOnly":"101.42","HighLimit":null,"LowLimit":null,"DaysRange":"98.37
+        - 101.46","DaysRangeRealtime":null,"FiftydayMovingAverage":"105.91","TwoHundreddayMovingAverage":"113.88","ChangeFromTwoHundreddayMovingAverage":"-12.46","PercentChangeFromTwoHundreddayMovingAverage":"-10.94%","ChangeFromFiftydayMovingAverage":"-4.49","PercentChangeFromFiftydayMovingAverage":"-4.24%","Name":"Apple
+        Inc.","Notes":null,"Open":"98.64","PreviousClose":"96.30","PricePaid":null,"ChangeinPercent":"+5.32%","PriceSales":"2.30","PriceBook":"4.50","ExDividendDate":"11/5/2015","PERatio":"11.00","DividendPayDate":"11/12/2015","PERatioRealtime":null,"PEGRatio":"0.89","PriceEPSEstimateCurrentYear":"10.69","PriceEPSEstimateNextYear":"9.73","Symbol":"AAPL","SharesOwned":null,"ShortRatio":"1.63","LastTradeTime":"4:00pm","TickerTrend":null,"OneyrTargetPrice":"142.67","Volume":"65800467","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"92.00
+        - 134.54","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":"2.15","PercentChange":"+5.32%"},{"symbol":"TSLA","Ask":"204.49","AverageDailyVolume":"3531730","Bid":"202.06","AskRealtime":null,"BidRealtime":null,"BookValue":"10.04","Change_PercentChange":"+2.58
+        - +1.29%","Change":"+2.58","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":"1/22/2016","TradeDate":null,"EarningsShare":"-5.33","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"-1.27","EPSEstimateNextYear":"1.77","EPSEstimateNextQuarter":"0.09","DaysLow":"199.03","DaysHigh":"205.50","YearLow":"181.40","YearHigh":"286.65","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"26.52B","MarketCapRealtime":null,"EBITDA":"-184.29M","ChangeFromYearLow":"21.15","PercentChangeFromYearLow":"+11.66%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-84.10","PercebtChangeFromYearHigh":"-29.34%","LastTradeWithTime":"4:00pm
+        - <b>202.55</b>","LastTradePriceOnly":"202.55","HighLimit":null,"LowLimit":null,"DaysRange":"199.03
+        - 205.50","DaysRangeRealtime":null,"FiftydayMovingAverage":"220.90","TwoHundreddayMovingAverage":"235.80","ChangeFromTwoHundreddayMovingAverage":"-33.25","PercentChangeFromTwoHundreddayMovingAverage":"-14.10%","ChangeFromFiftydayMovingAverage":"-18.35","PercentChangeFromFiftydayMovingAverage":"-8.31%","Name":"Tesla
+        Motors, Inc.","Notes":null,"Open":"205.32","PreviousClose":"199.97","PricePaid":null,"ChangeinPercent":"+1.29%","PriceSales":"6.91","PriceBook":"19.91","ExDividendDate":null,"PERatio":null,"DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"-1.57","PriceEPSEstimateCurrentYear":null,"PriceEPSEstimateNextYear":"114.44","Symbol":"TSLA","SharesOwned":null,"ShortRatio":"10.18","LastTradeTime":"4:00pm","TickerTrend":null,"OneyrTargetPrice":"284.47","Volume":"3124055","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"181.40
+        - 286.65","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":null,"PercentChange":"+1.29%"}]}}}'
+    http_version: 
+  recorded_at: Sun, 24 Jan 2016 15:10:27 GMT
+recorded_with: VCR 3.0.1

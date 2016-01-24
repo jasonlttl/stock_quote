@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://query.yahooapis.com/v1/public/yql?callback=&diagnostics=true&env=store://datatables.org/alltableswithkeys&format=json&q=SELECT%20*%20FROM%20yahoo.finance.historicaldata%20WHERE%20symbol%20IN%20(%27AAPL%27)%20AND%20startDate%20=%20%272013-01-03%27%20AND%20endDate%20=%20%272013-01-03%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - main-5a151cfe-c16c-11e5-89b6-d89d676f9644
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sun, 24 Jan 2016 15:10:26 GMT
+      Age:
+      - '0'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2016-01-24T15:10:26Z","lang":"en-US","diagnostics":{"url":[{"execution-start-time":"0","execution-stop-time":"3","execution-time":"3","content":"http://www.datatables.org/yahoo/finance/yahoo.finance.historicaldata.xml"},{"execution-start-time":"9","execution-stop-time":"241","execution-time":"232","content":"http://ichart.finance.yahoo.com/table.csv?a=0&b=3&e=3&g=d&c=2013&d=0&f=2013&s=AAPL"},{"execution-start-time":"247","execution-stop-time":"267","execution-time":"20","content":"http://ichart.finance.yahoo.com/table.csv?a=0&b=3&e=3&g=d&c=2013&d=0&f=2013&s=AAPL"}],"publiclyCallable":"true","cache":[{"execution-start-time":"7","execution-stop-time":"8","execution-time":"1","method":"GET","type":"MEMCACHED","content":"2979462f32123b7a86b8d9901490ea69"},{"execution-start-time":"244","execution-stop-time":"245","execution-time":"1","method":"GET","type":"MEMCACHED","content":"252dfaf5f53c4ee10e5cd211bdba1933"}],"query":[{"execution-start-time":"8","execution-stop-time":"244","execution-time":"236","params":"{url=[http://ichart.finance.yahoo.com/table.csv?a=0&b=3&e=3&g=d&c=2013&d=0&f=2013&s=AAPL]}","content":"select
+        * from csv(0,1) where url=@url"},{"execution-start-time":"245","execution-stop-time":"267","execution-time":"22","params":"{columnsNames=[Date,Open,High,Low,Close,Volume,Adj_Close],
+        url=[http://ichart.finance.yahoo.com/table.csv?a=0&b=3&e=3&g=d&c=2013&d=0&f=2013&s=AAPL]}","content":"select
+        * from csv(2,0) where url=@url and columns=@columnsNames"}],"javascript":{"execution-start-time":"5","execution-stop-time":"267","execution-time":"262","instructions-used":"32796","table-name":"yahoo.finance.historicaldata"},"user-time":"268","service-time":"257","build-version":"0.2.386"},"results":{"quote":{"Symbol":"AAPL","Date":"2013-01-03","Open":"547.87999","High":"549.669991","Low":"540.999992","Close":"542.099991","Volume":"88241300","Adj_Close":"72.748523"}}}}'
+    http_version: 
+  recorded_at: Sun, 24 Jan 2016 15:10:26 GMT
+recorded_with: VCR 3.0.1
